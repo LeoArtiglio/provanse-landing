@@ -53,20 +53,22 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 }
 
 /* ===== HEADER / NAV ===== */
-.header{position:fixed;top:0;left:0;width:100%;z-index:100;padding:20px 0;transition:background .4s,padding .3s,box-shadow .3s}
+.header{position:fixed;top:0;left:0;width:100%;z-index:100;padding:20px 0;transition:background .4s,padding .3s,box-shadow .3s;background:linear-gradient(180deg,rgba(58,54,50,.5) 0%,transparent 100%)}
 .header.scrolled{background:rgba(250,247,242,.97);padding:12px 0;box-shadow:0 2px 30px rgba(58,54,50,.08);backdrop-filter:blur(12px)}
 .header-inner{display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:var(--serif);font-size:1.75rem;font-weight:600;color:var(--charcoal);letter-spacing:.02em}
+.logo{font-family:var(--serif);font-size:1.75rem;font-weight:600;color:#fff;letter-spacing:.02em;text-shadow:0 1px 4px rgba(0,0,0,.3)}
+.header.scrolled .logo{color:var(--charcoal);text-shadow:none}
 .logo span{color:var(--lavender);font-style:italic}
 .nav{display:flex;gap:32px;align-items:center}
-.nav a{font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--warm-gray);transition:color .3s;position:relative}
+.nav a{font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85);transition:color .3s;position:relative;text-shadow:0 1px 3px rgba(0,0,0,.2)}
 .nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--lavender);transition:width .3s}
 .nav a:hover{color:var(--charcoal)}
 .nav a:hover::after{width:100%}
-.header.scrolled .nav a{color:var(--warm-gray)}
+.header.scrolled .nav a{color:var(--warm-gray);text-shadow:none}
 
 .nav-toggle{display:none;flex-direction:column;gap:5px;width:28px;padding:4px 0}
-.nav-toggle span{display:block;height:2px;background:var(--charcoal);border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-toggle span{display:block;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s,background .3s}
+.header.scrolled .nav-toggle span{background:var(--charcoal)}
 
 @media(max-width:900px){
   .nav-toggle{display:flex}
@@ -81,7 +83,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,54,50,.18) 0%,rgba(58,54,50,.45) 100%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,54,50,.35) 0%,rgba(58,54,50,.55) 100%)}
 .hero-content{position:relative;z-index:2;text-align:center;color:#fff;padding:0 24px;max-width:800px}
 .hero-badge{display:inline-block;font-family:var(--sans);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;border:1px solid rgba(255,255,255,.5);padding:8px 24px;border-radius:40px;margin-bottom:32px;animation:fadeDown .8s ease .3s both}
 .hero h1{font-family:var(--serif);font-size:clamp(2.8rem,6vw,5rem);font-weight:500;line-height:1.1;margin-bottom:20px;animation:fadeDown .8s ease .5s both}
@@ -257,6 +259,11 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .float-btn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.15);transition:transform .2s,box-shadow .2s}
 .float-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(0,0,0,.2)}
 .float-btn svg{width:26px;height:26px}
+@media(max-width:640px){
+  .float-btns{bottom:16px;right:16px;gap:10px}
+  .float-btn{width:46px;height:46px}
+  .float-btn svg{width:22px;height:22px}
+}
 .float-wa{background:#25D366}
 .float-tg{background:#2AABEE}
 .float-call{background:var(--lavender)}
@@ -278,7 +285,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 <!-- HEADER -->
 <header class="header" id="header">
 <div class="container header-inner">
-  <a href="#" class="logo">Прованс<span>.</span></a>
+  <a href="#" class="logo">Прованс</a>
   <nav class="nav" id="nav">
     <a href="#about">О нас</a>
     <a href="#rooms">Номера</a>
@@ -297,7 +304,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <img src="Территория/IMG_0433-1.jpg" alt="Гостевой дом Прованс — территория с бассейном" loading="eager">
+    <img src="territory/IMG_0433-1.jpg" alt="Гостевой дом Прованс — территория с бассейном" loading="eager">
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -347,7 +354,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 <div class="container">
   <div class="about-grid">
     <div class="about-img reveal-left">
-      <img src="Мангальная зона/IMG_9245-1.jpg" alt="Мангальная беседка в стиле Прованс" loading="lazy">
+      <img src="bbq/IMG_9245-1.jpg" alt="Мангальная беседка в стиле Прованс" loading="lazy">
     </div>
     <div class="reveal-right">
       <div class="about-tag">О нашем доме</div>
@@ -396,9 +403,13 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   <!-- Розмарин -->
   <div class="room-card reveal">
     <div class="room-gallery" data-room="rozmarin">
-      <img src="Розмарин/IMG_9882-1.jpg" alt="Номер Розмарин — кухня" class="active" loading="lazy">
+      <img src="rozmarin/IMG_9882-1.jpg" alt="Номер Розмарин — кухня" class="active" loading="lazy">
+      <img src="rozmarin/IMG_9828-1.jpg" alt="Розмарин — интерьер" loading="lazy">
+      <img src="rozmarin/IMG_9864-1.jpg" alt="Розмарин — комната" loading="lazy">
       <div class="room-dots">
         <button class="room-dot active" data-idx="0" aria-label="Фото 1"></button>
+        <button class="room-dot" data-idx="1" aria-label="Фото 2"></button>
+        <button class="room-dot" data-idx="2" aria-label="Фото 3"></button>
       </div>
     </div>
     <div class="room-info">
@@ -444,17 +455,23 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   <!-- Можжевеловый -->
   <div class="room-card reveal">
     <div class="room-gallery" data-room="mojjeveloviy">
-      <img src="Можжевеловый/IMG_9631-1.jpg" alt="Номер Можжевеловый — ванная" class="active" loading="lazy">
-      <img src="Можжевеловый/IMG_0413-1.jpg" alt="Можжевеловый — интерьер" loading="lazy">
-      <img src="Можжевеловый/IMG_9537-1.jpg" alt="Можжевеловый — комната" loading="lazy">
-      <img src="Можжевеловый/IMG_9546-1.jpg" alt="Можжевеловый — детали" loading="lazy">
-      <img src="Можжевеловый/IMG_9589-1.jpg" alt="Можжевеловый — вид" loading="lazy">
+      <img src="mozhzheveloviy/IMG_9537-1.jpg" alt="Номер Можжевеловый — спальня" class="active" loading="lazy">
+      <img src="mozhzheveloviy/IMG_9546-1.jpg" alt="Можжевеловый — гостиная" loading="lazy">
+      <img src="mozhzheveloviy/IMG_0413-1.jpg" alt="Можжевеловый — кухня" loading="lazy">
+      <img src="mozhzheveloviy/IMG_0427-1.jpg" alt="Можжевеловый — интерьер" loading="lazy">
+      <img src="mozhzheveloviy/IMG_0431-1.jpg" alt="Можжевеловый — детали" loading="lazy">
+      <img src="mozhzheveloviy/IMG_9589-1.jpg" alt="Можжевеловый — вид" loading="lazy">
+      <img src="mozhzheveloviy/IMG_9595-1.jpg" alt="Можжевеловый — обзор" loading="lazy">
+      <img src="mozhzheveloviy/IMG_9631-1.jpg" alt="Можжевеловый — ванная" loading="lazy">
       <div class="room-dots">
         <button class="room-dot active" data-idx="0" aria-label="Фото 1"></button>
         <button class="room-dot" data-idx="1" aria-label="Фото 2"></button>
         <button class="room-dot" data-idx="2" aria-label="Фото 3"></button>
         <button class="room-dot" data-idx="3" aria-label="Фото 4"></button>
         <button class="room-dot" data-idx="4" aria-label="Фото 5"></button>
+        <button class="room-dot" data-idx="5" aria-label="Фото 6"></button>
+        <button class="room-dot" data-idx="6" aria-label="Фото 7"></button>
+        <button class="room-dot" data-idx="7" aria-label="Фото 8"></button>
       </div>
     </div>
     <div class="room-info">
@@ -500,12 +517,12 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   <!-- Кипарис -->
   <div class="room-card reveal">
     <div class="room-gallery" data-room="kiparis">
-      <img src="Кипарис/IMG_9416-1.jpg" alt="Номер Кипарис — спальня" class="active" loading="lazy">
-      <img src="Кипарис/IMG_9482-1.jpg" alt="Кипарис — комната" loading="lazy">
-      <img src="Кипарис/IMG_9497-1.jpg" alt="Кипарис — интерьер" loading="lazy">
-      <img src="Кипарис/IMG_9461-1.jpg" alt="Кипарис — детали" loading="lazy">
-      <img src="Кипарис/IMG_9654-1.jpg" alt="Кипарис — вид" loading="lazy">
-      <img src="Кипарис/IMG_9685-1.jpg" alt="Кипарис — обзор" loading="lazy">
+      <img src="kiparis/IMG_9416-1.jpg" alt="Номер Кипарис — спальня" class="active" loading="lazy">
+      <img src="kiparis/IMG_9482-1.jpg" alt="Кипарис — комната" loading="lazy">
+      <img src="kiparis/IMG_9497-1.jpg" alt="Кипарис — интерьер" loading="lazy">
+      <img src="kiparis/IMG_9461-1.jpg" alt="Кипарис — детали" loading="lazy">
+      <img src="kiparis/IMG_9654-1.jpg" alt="Кипарис — вид" loading="lazy">
+      <img src="kiparis/IMG_9685-1.jpg" alt="Кипарис — обзор" loading="lazy">
       <div class="room-dots">
         <button class="room-dot active" data-idx="0" aria-label="Фото 1"></button>
         <button class="room-dot" data-idx="1" aria-label="Фото 2"></button>
@@ -558,13 +575,14 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   <!-- Лавандовый -->
   <div class="room-card reveal">
     <div class="room-gallery" data-room="lavandoviy">
-      <img src="Лавандовый/IMG_9913-1.jpg" alt="Номер Лавандовый — спальня" class="active" loading="lazy">
-      <img src="Лавандовый/IMG_0086-1.jpg" alt="Лавандовый — гостиная с камином" loading="lazy">
-      <img src="Лавандовый/IMG_0027-1.jpg" alt="Лавандовый — столовая" loading="lazy">
-      <img src="Лавандовый/IMG_0623-1.jpg" alt="Лавандовый — кухня" loading="lazy">
-      <img src="Лавандовый/IMG_0191-1.jpg" alt="Лавандовый — детали" loading="lazy">
-      <img src="Лавандовый/IMG_9950-1.jpg" alt="Лавандовый — интерьер" loading="lazy">
-      <img src="Лавандовый/IMG_9992-1.jpg" alt="Лавандовый — обзор" loading="lazy">
+      <img src="lavandoviy/IMG_9913-1.jpg" alt="Номер Лавандовый — спальня" class="active" loading="lazy">
+      <img src="lavandoviy/IMG_0086-1.jpg" alt="Лавандовый — гостиная с камином" loading="lazy">
+      <img src="lavandoviy/IMG_0069-1.jpg" alt="Лавандовый — сервировка" loading="lazy">
+      <img src="lavandoviy/IMG_0027-1.jpg" alt="Лавандовый — столовая" loading="lazy">
+      <img src="lavandoviy/IMG_0623-1.jpg" alt="Лавандовый — кухня" loading="lazy">
+      <img src="lavandoviy/IMG_0191-1.jpg" alt="Лавандовый — детали" loading="lazy">
+      <img src="lavandoviy/IMG_9950-1.jpg" alt="Лавандовый — интерьер" loading="lazy">
+      <img src="lavandoviy/IMG_9992-1.jpg" alt="Лавандовый — обзор" loading="lazy">
       <div class="room-dots">
         <button class="room-dot active" data-idx="0" aria-label="Фото 1"></button>
         <button class="room-dot" data-idx="1" aria-label="Фото 2"></button>
@@ -573,6 +591,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
         <button class="room-dot" data-idx="4" aria-label="Фото 5"></button>
         <button class="room-dot" data-idx="5" aria-label="Фото 6"></button>
         <button class="room-dot" data-idx="6" aria-label="Фото 7"></button>
+        <button class="room-dot" data-idx="7" aria-label="Фото 8"></button>
       </div>
     </div>
     <div class="room-info">
@@ -628,27 +647,27 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   </div>
   <div class="territory-grid">
     <div class="terr-card reveal-scale" style="transition-delay:.1s">
-      <img src="Бассейн/IMG_0308-1.jpg" alt="Подогреваемый бассейн" loading="lazy">
+      <img src="pool/IMG_0308-1.jpg" alt="Подогреваемый бассейн" loading="lazy">
       <div class="terr-card-overlay"><div class="terr-card-title">Подогреваемый бассейн</div></div>
     </div>
     <div class="terr-card reveal-scale" style="transition-delay:.2s">
-      <img src="Мангальная зона/IMG_9248-1.jpg" alt="Мангальная зона" loading="lazy">
+      <img src="bbq/IMG_9248-1.jpg" alt="Мангальная зона" loading="lazy">
       <div class="terr-card-overlay"><div class="terr-card-title">Мангальная зона</div></div>
     </div>
     <div class="terr-card reveal-scale" style="transition-delay:.3s">
-      <img src="Чан/IMG_1971-1.jpg" alt="Банный чан" loading="lazy">
+      <img src="chan/IMG_1971-1.jpg" alt="Банный чан" loading="lazy">
       <div class="terr-card-overlay"><div class="terr-card-title">Банный чан</div></div>
     </div>
     <div class="terr-card reveal-scale" style="transition-delay:.4s">
-      <img src="Бассейн/IMG_0358-1.jpg" alt="Зона отдыха у бассейна" loading="lazy">
+      <img src="pool/IMG_0358-1.jpg" alt="Зона отдыха у бассейна" loading="lazy">
       <div class="terr-card-overlay"><div class="terr-card-title">Зона отдыха</div></div>
     </div>
     <div class="terr-card reveal-scale" style="transition-delay:.5s">
-      <img src="Территория/IMG_0433-1.jpg" alt="Общий вид территории" loading="lazy">
+      <img src="territory/IMG_0433-1.jpg" alt="Общий вид территории" loading="lazy">
       <div class="terr-card-overlay"><div class="terr-card-title">Зелёная территория</div></div>
     </div>
     <div class="terr-card reveal-scale" style="transition-delay:.6s">
-      <img src="Мангальная зона/IMG_9245-1.jpg" alt="Беседка с зеленью" loading="lazy">
+      <img src="bbq/IMG_9245-1.jpg" alt="Беседка с зеленью" loading="lazy">
       <div class="terr-card-overlay"><div class="terr-card-title">Беседки</div></div>
     </div>
   </div>
@@ -716,6 +735,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     <div class="reveal-left">
       <div class="about-tag" style="color:var(--lavender-soft)">Расположение</div>
       <h2>Идеальная близость к морю и природе</h2>
+      <p style="color:rgba(255,255,255,.7);font-size:.9rem;margin-bottom:28px;line-height:1.6">Краснодарский край, г.о. Новороссийск,<br>с. Южная Озереевка, СНТ Геолог,<br>ул. Ивана Лебединского, 21к1</p>
       <div class="loc-items">
         <div class="loc-item">
           <div class="loc-dot"></div>
@@ -853,7 +873,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 <div class="container">
   <div class="footer-grid">
     <div>
-      <div class="footer-brand">Прованс<span>.</span></div>
+      <div class="footer-brand">Прованс</div>
       <p class="footer-desc">Гостевой дом в провансальском стиле на Черноморском побережье. Южная Озереевка, 700 метров до моря.</p>
     </div>
     <div>
