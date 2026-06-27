@@ -181,8 +181,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .srv-card{background:var(--warm-white);border-radius:16px;padding:40px 32px;text-align:center;transition:transform .3s,box-shadow .3s;border:1px solid transparent}
 .srv-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(58,54,50,.08);border-color:var(--lavender-soft)}
-.srv-icon{width:64px;height:64px;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(155,142,196,.12),rgba(122,139,111,.08));border-radius:50%}
-.srv-icon svg{width:28px;height:28px;color:var(--lavender)}
+.srv-icon{width:80px;height:80px;margin:0 auto 20px;display:flex;align-items:center;justify-content:center}
+.srv-icon img{width:100%;height:100%;object-fit:contain}
 .srv-card h3{font-family:var(--serif);font-size:1.3rem;font-weight:600;margin-bottom:12px}
 .srv-card p{font-size:.9rem;color:var(--warm-gray);line-height:1.7}
 @media(max-width:768px){.services-grid{grid-template-columns:1fr 1fr;gap:16px}.srv-card{padding:28px 20px}}
@@ -703,46 +703,34 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
   </div>
   <div class="services-grid">
     <div class="srv-card reveal" style="transition-delay:.1s">
-      <div class="srv-icon">
-        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 4c-3 0-6 2-6 5 0 4 6 8 6 8s6-4 6-8c0-3-3-5-6-5z"/><path d="M8 18c-3 1-5 3-5 5v2h22v-2c0-2-2-4-5-5"/><circle cx="14" cy="7.5" r="1.5"/></svg>
-      </div>
-      <h3>Камерная свадьба</h3>
-      <p>До 20 гостей. Закрытая территория только для вас, вид на море, беседки и мангал.</p>
+      <div class="srv-icon"><img src="icons/wedding.png" alt="Свадьба" loading="lazy"></div>
+      <h3>Камерная свадьба на берегу моря</h3>
+      <p>Организуйте незабываемый праздник для самых близких — до 20 гостей. Уединённый гостевой дом с закрытой территорией, захватывающим видом на море, комфортными беседками и мангалом. Ваш день — только по вашим правилам.</p>
     </div>
     <div class="srv-card reveal" style="transition-delay:.2s">
-      <div class="srv-icon">
-        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 3v4M6 7l2 3M22 7l-2 3"/><rect x="4" y="14" width="20" height="4" rx="2"/><path d="M8 18v6M20 18v6M8 24h12"/><path d="M12 14v-2a2 2 0 014 0v2"/></svg>
-      </div>
-      <h3>День рождения</h3>
-      <p>Закрытая территория, бассейн в вашем распоряжении, мангальная зона для праздника.</p>
+      <div class="srv-icon"><img src="icons/birthday.png" alt="День рождения" loading="lazy"></div>
+      <h3>День рождения в уединённом месте</h3>
+      <p>Отметьте особенный день в окружении природы и близких людей. Закрытая территория гостевого дома, подогреваемый бассейн, мангальная зона и море в 700 метрах — всё для праздника, о котором будут вспоминать долго.</p>
     </div>
     <div class="srv-card reveal" style="transition-delay:.3s">
-      <div class="srv-icon">
-        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="14" cy="14" r="10"/><path d="M14 8v6l4 4"/></svg>
-      </div>
-      <h3>Девичник</h3>
-      <p>Банный чан, бассейн, мангал и полностью закрытое пространство для вашей компании.</p>
+      <div class="srv-icon"><img src="icons/bachelorette.png" alt="Девичник" loading="lazy"></div>
+      <h3>Девичник или мальчишник на природе</h3>
+      <p>Проведите вечер перед свадьбой в расслабленной атмосфере! Полностью закрытая территория, расслабляющий банный чан, освежающий бассейн и мангальная зона. Создайте лучшие воспоминания перед важным днём.</p>
     </div>
     <div class="srv-card reveal" style="transition-delay:.4s">
-      <div class="srv-icon">
-        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="22" height="16" rx="2"/><path d="M3 10h22"/><circle cx="8" cy="18" r="2"/></svg>
-      </div>
-      <h3>Корпоратив</h3>
-      <p>Природа и уединение. Совместите работу и отдых на закрытой территории.</p>
+      <div class="srv-icon"><img src="icons/corporate.png" alt="Корпоратив" loading="lazy"></div>
+      <h3>Корпоративный отдых на природе</h3>
+      <p>Найдите идеальный баланс между командным духом и расслаблением. Уединённый гостевой дом для вашего коллектива: закрытая территория, вдохновляющая природа и абсолютная приватность — вдали от офисной суеты и посторонних глаз.</p>
     </div>
     <div class="srv-card reveal" style="transition-delay:.5s">
-      <div class="srv-icon">
-        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 4L4 10v12l10 4 10-4V10z"/><path d="M14 16v8M4 10l10 6 10-6"/></svg>
-      </div>
-      <h3>Ретрит</h3>
-      <p>Зал для йоги и медитаций, до 16 человек. Закрытый отель только под вашу группу.</p>
+      <div class="srv-icon"><img src="icons/retreat.png" alt="Ретрит" loading="lazy"></div>
+      <h3>Ретриты и духовные практики</h3>
+      <p>Организуйте глубокую перезагрузку в атмосфере абсолютного уединения — до 16 участников. Гостевой дом закрывается исключительно под вашу группу: тишина, комфортный зал для йоги и медитаций. Идеальное пространство для восстановления сил и поиска внутренней гармонии.</p>
     </div>
     <div class="srv-card reveal" style="transition-delay:.6s">
-      <div class="srv-icon">
-        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 3v2M5 8l2 1M23 8l-2 1M7 20h14"/><rect x="6" y="12" width="16" height="8" rx="2"/></svg>
-      </div>
-      <h3>Романтический ужин</h3>
-      <p>Накрытое пространство для ужина на двоих — идеальная обстановка для особого вечера.</p>
+      <div class="srv-icon"><img src="icons/romantic.png" alt="Романтический ужин" loading="lazy"></div>
+      <h3>Романтический вечер у моря</h3>
+      <p>Подарите себе и второй половинке незабываемый вечер в атмосфере южного Прованса. Уютно накрытое пространство среди зелени, свечи, тёплый вечерний воздух и звуки природы — идеальная обстановка для особенного свидания.</p>
     </div>
   </div>
 </div>
@@ -794,14 +782,14 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     <div class="retreat-content reveal-right">
       <div class="about-tag" style="color:var(--lavender-soft)">Для организаторов ретритов</div>
       <h2>Закрытое пространство у моря — только для вашей группы</h2>
-      <p>Мы закрываем отель целиком под одну группу до 16 человек. Никаких посторонних — только ваши участники, море и природа.</p>
+      <p>Мы закрываем гостевой дом целиком под одну группу до 16 человек. Никаких посторонних — только ваши участники, море и природа.</p>
       <ul class="retreat-list">
-        <li>Зал для йоги и медитаций с ковриками и подушками</li>
+        <li>Зал для йоги и медитаций со всем необходимым оборудованием</li>
         <li>4 номера — Розмарин, Кипарис, Можжевеловый, Лавандовый</li>
         <li>Обогреваемый бассейн, чан, мангальная зона</li>
         <li>Обособленный пляж в 700 м, открытая вода</li>
         <li>Пешие маршруты, места силы, винный туризм рядом</li>
-        <li>Полностью оснащённая кухня для вашего повара</li>
+        <li>Полностью оснащённая кухня</li>
         <li>Питание группы — уточните при бронировании</li>
       </ul>
       <p class="retreat-note">Цены и условия сотрудничества — по запросу</p>
@@ -854,7 +842,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       </div>
     </div>
     <div class="loc-map reveal-right">
-      <iframe src="https://yandex.ru/map-widget/v1/?ll=37.5444%2C44.6961&z=15&pt=37.5444%2C44.6961%2Cpm2rdm&lang=ru_RU" allowfullscreen loading="lazy" title="Карта расположения гостевого дома Прованс"></iframe>
+      <iframe src="https://yandex.ru/map-widget/v1/?ll=37.643863%2C44.674180&z=17&pt=37.643409%2C44.674146%2Cpm2rdm&lang=ru_RU" allowfullscreen loading="lazy" title="Карта расположения гостевого дома Прованс"></iframe>
     </div>
   </div>
 </div>
@@ -924,12 +912,12 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     <div class="rule-item reveal" style="transition-delay:.2s">
       <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><circle cx="20" cy="12" r="3"/><path d="M4 26c0-4 4-7 8-7s8 3 8 7"/><path d="M20 15c3 0 6 2 6 5v2"/></svg>
       <div class="rule-label">Дети</div>
-      <div class="rule-val">Можно, стульчик есть</div>
+      <div class="rule-val">Можно с детьми</div>
     </div>
     <div class="rule-item reveal" style="transition-delay:.3s">
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="14" r="6"/><path d="M10 20l-2 8M22 20l2 8M13 10c0-3 6-3 6 0"/><line x1="8" y1="4" x2="24" y2="28" stroke-width="2"/></svg>
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 8c-1-2-3-2-3 0s1 3 2 3"/><path d="M21 8c1-2 3-2 3 0s-1 3-2 3"/><ellipse cx="16" cy="16" rx="7" ry="6"/><circle cx="13" cy="15" r="1" fill="currentColor"/><circle cx="19" cy="15" r="1" fill="currentColor"/><ellipse cx="16" cy="18" rx="2" ry="1"/><path d="M10 22c-1 2-2 4-3 5"/><path d="M22 22c1 2 2 4 3 5"/><path d="M13 22c0 2 0 5-1 6"/><path d="M19 22c0 2 0 5 1 6"/><path d="M24 26c-1 1-3 2-4 2"/><line x1="5" y1="3" x2="27" y2="29" stroke-width="2.5" stroke="var(--rose)"/></svg>
       <div class="rule-label">Животные</div>
-      <div class="rule-val">К сожалению, нет</div>
+      <div class="rule-val">К сожалению, нельзя</div>
     </div>
   </div>
 </div>
@@ -983,8 +971,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span>&copy; 2013–2026 Гостевой дом «Прованс». Южная Озереевка.</span>
+  <div class="footer-bottom" style="flex-direction:column;gap:8px;text-align:center">
+    <span>ИП Артёмов Кирилл Алексеевич &middot; ИНН 230914891442</span>
+    <span>г. Санкт-Петербург, ул. Глинки, д. 3-5-7, лит. А, кв. 14</span>
+    <span>&copy; Гостевой дом «Прованс». Южная Озереевка.</span>
     <a href="tel:+79180572711" class="footer-phone">+7 (918) 057-27-11</a>
   </div>
 </div>
